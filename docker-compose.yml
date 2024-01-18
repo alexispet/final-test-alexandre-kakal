@@ -26,6 +26,7 @@ services:
       DB_DATABASE: ${DB_DATABASE}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+      NODE_ENV: development
 
     ports:
       - "3001:3000"
