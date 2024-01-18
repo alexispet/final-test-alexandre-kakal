@@ -33,7 +33,7 @@ jobs:
             node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: run tests
-        run: docker exec final-test-alexandre-kakal-express-1 npm run test
+        run: npm run test
 
   build-and-push-image:
     runs-on: ubuntu-latest
