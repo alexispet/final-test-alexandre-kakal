@@ -39,6 +39,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      express:
+        condition: service_healthy
     volumes:
       - ".:/app"
     command: ["npm", "run", "dev"]
