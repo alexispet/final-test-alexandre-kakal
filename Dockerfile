@@ -8,6 +8,8 @@ RUN npm install
 
 FROM node:21.5.0-alpine3.19 AS api
 
+LABEL org.opencontainers.image.source https://github.com/alexispet/final-test-alexandre-kakal.git
+
 WORKDIR /app
 
 COPY --from=install /app/package.json .
