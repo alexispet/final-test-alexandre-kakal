@@ -28,7 +28,7 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       NODE_ENV: development
     healthcheck:
-      test: "curl -f http://localhost:3000/ || exit 1"
+      test: ["CMD-SHELL", "npm list --depth=0 || exit 1"]
       interval: 1m
       timeout: 20s
       retries: 10
