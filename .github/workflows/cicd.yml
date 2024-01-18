@@ -33,7 +33,7 @@ jobs:
             node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: run tests
-        run: docker run --rm -v $PWD:/app -w /app node:21.5.0-alpine npm run test
+        run: docker-compose run --rm express npm run test
 
   build-and-push-image:
     runs-on: ubuntu-latest
