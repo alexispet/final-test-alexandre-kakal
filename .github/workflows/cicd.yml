@@ -17,7 +17,7 @@ jobs:
           path: |
             node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - run: npm ci
+      - run: npm ci && docker compose up
 
   test:
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
             node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: run tests
-        run: docker-compose run --rm express npm run test
+        run: docker exec -it ${{ needs.build.outputs.container_id }} npm run test && docker ps && docker compose down
 
   build-and-push-image:
     runs-on: ubuntu-latest
