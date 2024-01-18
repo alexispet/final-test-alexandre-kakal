@@ -7,6 +7,7 @@ if [ $NODE_ENV == "development" ]; then
   npm install
 fi
 
+# todo : do not run migration if already done
 npm run db:import
 
 exec "$@"
