@@ -1,11 +1,15 @@
-test dev branch
+Alexandre Kakal
+
+shoutrrr notification
+
+https://discord.gg/BvtbS5w9 (expires 26/19/2024)
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/OlYrOqbl)
 
 # Y Social network API
 
-Production URL: ****\_\_****  
-Development URL: ****\_\_****
+Production URL: \***\*\_\_\*\***  
+Development URL: \***\*\_\_\*\***
 
 ## Description
 
