@@ -1,0 +1,20 @@
+name: CI/CD
+run-name: ${{ github.actor }} is running CI/CD
+on:
+  ["push"]
+  # schedule:
+  #   - cron: "0 12 * * *"
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          urls: |
+            http://ec2-18-206-35-208.compute-1.amazonaws.com:80
+            http://ec2-18-206-35-208.compute-1.amazonaws.com:80/post
+          budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
