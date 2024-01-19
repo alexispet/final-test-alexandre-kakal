@@ -1,4 +1,4 @@
-name: CI/CD
+name: lighthouse
 run-name: ${{ github.actor }} is running CI/CD
 on:
   ["push"]
