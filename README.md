@@ -8,8 +8,8 @@ https://discord.gg/BvtbS5w9 (expires 26/19/2024)
 
 # Y Social network API
 
-Production URL: \***\*\_\_\*\***  
-Development URL: \***\*\_\_\*\***
+Production URL: http://ec2-18-206-35-208.compute-1.amazonaws.com:80
+Development URL: http://ec2-18-206-35-208.compute-1.amazonaws.com:3000
 
 ## Description
 
