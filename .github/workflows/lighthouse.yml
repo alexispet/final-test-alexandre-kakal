@@ -2,7 +2,7 @@ name: lighthouse
 run-name: ${{ github.actor }} is running CI/CD
 on:
   schedule:
-    - cron: "4 17 * * *"
+    - cron: "5 15 * * *"
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
