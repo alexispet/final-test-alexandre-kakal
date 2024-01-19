@@ -9,14 +9,17 @@ env:
   DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
   DB_DATABASE: ${{ secrets.DB_DATABASE }}
 jobs:
-  test:
+  test-and-audit:
     environment:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: run tests
+      - name: compose up
         run: docker compose up -d --wait
-      - run: docker compose exec express npm run test
+      - name: mocha test
+        run: docker compose exec express npm run test
+      - name: npm audit
+        run: docker compose exec express npm audit --audit-level=high
 
   build-and-push-image:
     runs-on: ubuntu-latest
