@@ -3,3 +3,4 @@ node_modules
 docker/mariadb/data
 .env
 .DS_Store
+docker-compose.prod.yml
